@@ -283,6 +283,25 @@ In this step, you deploy the API that you created to a stage called prod.
 
 We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
 
+## Performance test using Postman
+
+Install native desktop version postman tool and sign in to an account.
+
+Create new collection and post method like below 
+![image](https://github.com/ragerumal/serverless-microservice/assets/126337647/be609648-25b5-4e10-92e2-5c1595a609d9)
+
+List operation below 
+
+![image](https://github.com/ragerumal/serverless-microservice/assets/126337647/7f3ee40d-572f-400a-9ffe-699f1e520a29)
+
+Run collection in performance test mode
+
+![image](https://github.com/ragerumal/serverless-microservice/assets/126337647/30807d77-8c43-411f-ad8f-f56e75953cf4)
+
+Sample report for the performance test done
+
+![image](https://github.com/ragerumal/serverless-microservice/assets/126337647/efaf5580-d231-47f0-8307-fc6596700ad8)
+
 ## Cleanup
 
 Let's clean up the resources we have created for this lab.
