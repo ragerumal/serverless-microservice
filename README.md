@@ -292,7 +292,7 @@ Let's clean up the resources we have created for this lab.
 
 To delete the table, from DynamoDB console, select the table "lambda-apigateway", and click "Delete table"
 
-![Delete Dynamo](./images/delete-dynamo.jpg)
+![Delete Dynamo](./images/delete-dynamo.JPG)
 
 To delete the Lambda, from the Lambda console, select lambda "LambdaFunctionOverHttps", click "Actions", then click Delete 
 
