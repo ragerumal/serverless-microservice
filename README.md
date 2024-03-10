@@ -198,7 +198,8 @@ Create the DynamoDB table that the Lambda function uses.
 
 5. Give the API name as "DynamoDBOperations", keep everything as is, click "Create API"
 
-![Create REST API](./images/create-new-api.jpg)
+![create-new-api](https://github.com/ragerumal/serverless-microservice/assets/126337647/a7af1adf-34b0-4ce3-81a1-6996f91208ae)
+
 
 5. Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services. Typically, API resources are organized in a resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next 
 
