@@ -274,7 +274,8 @@ In this step, you deploy the API that you created to a stage called prod.
     ```   
 3. To validate that the item is indeed inserted into DynamoDB table, go to Dynamo console, select "lambda-apigateway" table, select "Items" tab, and the newly inserted item should be displayed.
 
-![Dynamo Item](./images/dynamo-item.jpg)
+![dynamoDBtablecontents](https://github.com/ragerumal/serverless-microservice/assets/126337647/53554249-d3a3-45db-a3f5-bdf22ecc60e0)
+
 
 4. To get all the inserted items from the table, we can use the "list" operation of Lambda using the same API. Pass the following JSON to the API, and it will return all the items from the Dynamo table
 
