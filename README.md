@@ -322,7 +322,8 @@ To delete the table, from DynamoDB console, select the table "lambda-apigateway"
 
 To delete the Lambda, from the Lambda console, select lambda "LambdaFunctionOverHttps", click "Actions", then click Delete 
 
-![Delete Lambda](./images/delete-lambda.jpg)
+![delete-lamda](https://github.com/ragerumal/serverless-microservice/assets/126337647/efef5ee2-a9e6-4330-a627-4034efb390cf)
+
 
 To delete the API we created, in API gateway console, under APIs, select "DynamoDBOperations" API, click "Actions", then "Delete"
 
