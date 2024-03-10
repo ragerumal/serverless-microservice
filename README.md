@@ -316,12 +316,13 @@ Sample report for the performance test done
 The AWS Serverless Application Model (AWS SAM) is a toolkit that improves the developer experience of building and running serverless applications on AWS. 
 AWS SAM template specification – An open-source framework that you can use to define your serverless application infrastructure on AWS.
 Sample SAM template as below
+
+```yaml
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 
 Description: SAM template for API Gateway, Lambda, and DynamoDB CRUD project architecture
 
-```
 Resources:
   DynamoDBTable:
     Type: 'AWS::DynamoDB::Table'
