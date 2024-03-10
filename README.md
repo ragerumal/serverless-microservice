@@ -311,6 +311,64 @@ Sample report for the performance test done
 
 ![image](https://github.com/ragerumal/serverless-microservice/assets/126337647/efaf5580-d231-47f0-8307-fc6596700ad8)
 
+## To DO or To BE:
+
+The AWS Serverless Application Model (AWS SAM) is a toolkit that improves the developer experience of building and running serverless applications on AWS. 
+AWS SAM template specification – An open-source framework that you can use to define your serverless application infrastructure on AWS.
+Sample SAM template as below
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+
+Description: SAM template for API Gateway, Lambda, and DynamoDB CRUD project architecture
+
+```json
+Resources:
+  DynamoDBTable:
+    Type: 'AWS::DynamoDB::Table'
+    Properties:
+      TableName: lambda-apigateway
+      AttributeDefinitions:
+        - AttributeName: id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: id
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+
+  LambdaFunction:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.8
+      Policies:
+        - DynamoDBCrudPolicy: {}
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref DynamoDBTable
+      Events:
+        ApiGatewayEvent:
+          Type: Api
+          Properties:
+            Path: /dynamodbmanager
+            Method: post
+
+Outputs:
+  ApiUrl:
+    Description: URL of the API Gateway endpoint
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/dynamodbmanager'
+  DynamoDBTableName:
+    Description: Name of the DynamoDB table
+    Value: !Ref DynamoDBTable
+```
+*sam deploy --guided --template template.yaml is the command you enter at the command line.
+*sam deploy --guided --template should be provided as is.
+*template.yaml can be replaced with your specific file name.
+*The output starts at Configuring SAM deploy.
+*In the output, ENTER and y indicate replaceable values that you provide.
+
+
 ## Cleanup
 
 Let's clean up the resources we have created for this lab.
