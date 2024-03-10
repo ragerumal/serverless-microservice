@@ -192,8 +192,8 @@ Create the DynamoDB table that the Lambda function uses.
 ![create API](./images/create-api-button.jpg) 
 
 3. Scroll down and select "Build" for REST API
-
-![Build REST API](./images/build-rest-api.jpg) 
+ 
+![create-lambda-func](https://github.com/ragerumal/serverless-microservice/assets/126337647/1fa5719b-db76-496c-9c9e-7985b2ebcea3)
 
 4. Give the API name as "DynamoDBOperations", keep everything as is, click "Create API"
 
