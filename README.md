@@ -205,7 +205,8 @@ Create the DynamoDB table that the Lambda function uses.
 
 Click "Actions", then click "Create Resource"
 
-![Create API resource](./images/create-api-resource.jpg)
+![create-api-resource](https://github.com/ragerumal/serverless-microservice/assets/126337647/c0f47e34-9462-4bae-abf9-a667a7fb6efd)
+
 
 6. Input "DynamoDBManager" in the Resource Name, Resource Path will get populated. Click "Create Resource"
 
