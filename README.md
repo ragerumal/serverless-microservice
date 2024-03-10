@@ -215,15 +215,17 @@ Click "Actions", then click "Create Resource"
 
 7. Let's create a POST Method for our API. With the "/dynamodbmanager" resource selected, Click "Actions" again and click "Create Method". 
 
-![Create resource method](./images/create-method-1.jpg)
+![create-method-1](https://github.com/ragerumal/serverless-microservice/assets/126337647/71363d96-567a-4022-b061-d8c51c7e536d)
+
 
 8. Select "POST" from drop down , then click checkmark
 
-![Create resource method](./images/create-method-2.jpg)
+![create-method-2](https://github.com/ragerumal/serverless-microservice/assets/126337647/86d9b988-8b6e-4506-a4b6-f98999855c9c)
+
 
 9. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier. As you start typing the name, your function name will show up.Select and click "Save". A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "Ok"
 
-![Create lambda integration](./images/create-lambda-integration.jpg)
+![create-method-3](https://github.com/ragerumal/serverless-microservice/assets/126337647/15883f94-34bf-404f-bafa-ba73eb3016c9)
 
 Our API-Lambda integration is done!
 
@@ -233,11 +235,12 @@ In this step, you deploy the API that you created to a stage called prod.
 
 1. Click "Actions", select "Deploy API"
 
-![Deploy API](./images/deploy-api-1.jpg)
+![deploy-api-1](https://github.com/ragerumal/serverless-microservice/assets/126337647/edaf05c4-c407-4020-a5f2-b55ccfc3b158)
+
 
 2. Now it is going to ask you about a stage. Select "[New Stage]" for "Deployment stage". Give "Prod" as "Stage name". Click "Deploy"
 
-![Deploy API to Prod Stage](./images/deploy-api-2.jpg)
+![deploy-api-2](https://github.com/ragerumal/serverless-microservice/assets/126337647/bc4d91fd-856f-4c89-8989-f45a1e0d236c)
 
 3. We're all set to run our solution! To invoke our API endpoint, we need the endpoint url. In the "Stages" screen, expand the stage "Prod", select "POST" method, and copy the "Invoke URL" from screen
 
