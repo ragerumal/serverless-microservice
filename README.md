@@ -287,7 +287,8 @@ In this step, you deploy the API that you created to a stage called prod.
     }
 }
 ```
-![List Dynamo Items](./images/dynamo-item-list.jpg)
+
+![dynamo-item-list](https://github.com/ragerumal/serverless-microservice/assets/126337647/e6036b40-2629-405b-b7cb-442bfd059312)
 
 We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
 
