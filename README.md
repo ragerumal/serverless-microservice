@@ -321,7 +321,7 @@ Transform: 'AWS::Serverless-2016-10-31'
 
 Description: SAM template for API Gateway, Lambda, and DynamoDB CRUD project architecture
 
-```json
+```
 Resources:
   DynamoDBTable:
     Type: 'AWS::DynamoDB::Table'
@@ -362,11 +362,11 @@ Outputs:
     Description: Name of the DynamoDB table
     Value: !Ref DynamoDBTable
 ```
-*sam deploy --guided --template template.yaml is the command you enter at the command line.
-*sam deploy --guided --template should be provided as is.
-*template.yaml can be replaced with your specific file name.
-*The output starts at Configuring SAM deploy.
-*In the output, ENTER and y indicate replaceable values that you provide.
+1. sam deploy --guided --template template.yaml is the command you enter at the command line.
+2. sam deploy --guided --template should be provided as is.
+3. template.yaml can be replaced with your specific file name.
+4. The output starts at Configuring SAM deploy.
+5. In the output, ENTER and y indicate replaceable values that you provide.
 
 
 ## Cleanup
