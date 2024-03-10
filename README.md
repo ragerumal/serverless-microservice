@@ -210,7 +210,8 @@ Click "Actions", then click "Create Resource"
 
 6. Input "DynamoDBManager" in the Resource Name, Resource Path will get populated. Click "Create Resource"
 
-![Create resource](./images/create-resource-name.jpg)
+![create-resource-name](https://github.com/ragerumal/serverless-microservice/assets/126337647/49cd729d-762c-49b1-932d-4de824188ea7)
+
 
 7. Let's create a POST Method for our API. With the "/dynamodbmanager" resource selected, Click "Actions" again and click "Create Method". 
 
