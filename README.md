@@ -330,7 +330,7 @@ Sample report for the performance test done
 
 ![image](https://github.com/ragerumal/serverless-microservice/assets/126337647/efaf5580-d231-47f0-8307-fc6596700ad8)
 
-## Infrastructure Deployment using IAC:
+## TO DO - Infrastructure Deployment using IAC:
 
 The AWS Serverless Application Model (AWS SAM) is a toolkit that improves the developer experience of building and running serverless applications on AWS. 
 AWS SAM template specification – An open-source framework that you can use to define your serverless application infrastructure on AWS.
