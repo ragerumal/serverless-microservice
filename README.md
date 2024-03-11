@@ -103,42 +103,61 @@ To create an execution role
 
 **Example Python Code**
 ```python
-from __future__ import print_function
-
+from __future__ import annotations
+from typing import Any, Dict, Callable
 import boto3
-import json
 
 print('Loading function')
 
 
-def lambda_handler(event, context):
+def lambda_handler(event: Dict[str, Any], context: Any) -> Any:
     '''Provide an event that contains the following keys:
 
       - operation: one of the operations in the operations dict below
       - tableName: required for operations that interact with DynamoDB
       - payload: a parameter to pass to the operation being performed
     '''
-    #print("Received event: " + json.dumps(event, indent=2))
-
     operation = event['operation']
 
     if 'tableName' in event:
         dynamo = boto3.resource('dynamodb').Table(event['tableName'])
 
-    operations = {
-        'create': lambda x: dynamo.put_item(**x),
-        'read': lambda x: dynamo.get_item(**x),
-        'update': lambda x: dynamo.update_item(**x),
-        'delete': lambda x: dynamo.delete_item(**x),
-        'list': lambda x: dynamo.scan(**x),
-        'echo': lambda x: x,
-        'ping': lambda x: 'pong'
+    def create(payload: Dict[str, Any]) -> Any:
+        return dynamo.put_item(**payload)
+
+    def read(payload: Dict[str, Any]) -> Any:
+        return dynamo.get_item(**payload)
+
+    def update(payload: Dict[str, Any]) -> Any:
+        return dynamo.update_item(**payload)
+
+    def delete(payload: Dict[str, Any]) -> Any:
+        return dynamo.delete_item(**payload)
+
+    def list_(payload: Dict[str, Any]) -> Any:
+        return dynamo.scan(**payload)
+
+    def echo(payload: Any) -> Any:
+        return payload
+
+    def ping(payload: Any) -> str:
+        return 'pong'
+
+    operations: Dict[str, Callable[[Dict[str, Any]], Any]] = {
+        'create': create,
+        'read': read,
+        'update': update,
+        'delete': delete,
+        'list': list_,
+        'echo': echo,
+        'ping': ping
     }
 
     if operation in operations:
         return operations[operation](event.get('payload'))
     else:
-        raise ValueError('Unrecognized operation "{}"'.format(operation))
+        raise ValueError(f'Unrecognized operation "{operation}"')
+
 ```
 ![Lambda Code](./images/lambda-code-paste.jpg)
 
