@@ -343,6 +343,7 @@ Resources:
     Properties:
       Handler: lambda_function.lambda_handler
       Runtime: python3.8
+      CodeUri: s3://bucket-name/key-name
       Policies:
         - DynamoDBCrudPolicy: {}
       Environment:
